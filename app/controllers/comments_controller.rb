@@ -13,9 +13,9 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:post_id]
 
     if @comment.save
-      flash[:notice] = "thanks for your comment!"
+      flash[:notice] = "Thanks for your comment!"
     else
-      flash[:alert] = "your comment wasn't posted. please try again."
+      flash[:alert] = "Your comment could not be posted. Please try again."
     end
 
     redirect_to "/posts/#{params[:post_id]}"
@@ -34,9 +34,9 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     
     if @comment.destroy
-      flash[:notice] = "comment deleted."
+      flash[:notice] = "Comment deleted."
     else
-      flash[:alert] = "couldn't delete comment. please try again."
+      flash[:alert] = "Could not delete comment. please try again."
     end
 
     redirect_to "/posts/#{params[:post_id]}"
