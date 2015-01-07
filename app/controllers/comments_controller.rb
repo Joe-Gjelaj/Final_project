@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
       flash[:alert] = "Your comment could not be posted. Please try again."
     end
 
-    redirect_to "/posts/#{params[:post_id]}"
+    redirect_to ""
   end
 
   def show
@@ -39,7 +39,7 @@ class CommentsController < ApplicationController
       flash[:alert] = "Could not delete comment. please try again."
     end
 
-    redirect_to "/posts/#{params[:post_id]}"
+    redirect_to ""
   end
 
   private
