@@ -18,7 +18,7 @@ class Dog < ActiveRecord::Base
 			p name
 			p info
 			p image
-			Dog.create(breed: name, information: info, image: image)
+			Dog.create(breed: name, description: info, image_url: image)
 		end
 	end
 
