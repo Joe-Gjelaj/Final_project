@@ -1,0 +1,15 @@
+<h2>Dog Breeds</h2>
+
+<div id="breeds">
+
+<% @dogs.each do |dog| %>
+		<%= dog.breed %> <br>
+		<%= dog.description %> <br>
+		<%= dog.image_url %> <br>
+<br>
+
+
+<% end %>
+
+
+</div>
