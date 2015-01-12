@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	def index
+  def index
     @users = User.all
     current_user
   end
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       flash[:alert] = "Unsuccessful signup. Please try again."
     end
 
-    redirect_to ""
+    redirect_to "/"
   end
 
   def new
@@ -42,3 +42,4 @@ class UsersController < ApplicationController
   end
 
 end
+

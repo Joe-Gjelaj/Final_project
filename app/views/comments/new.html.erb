@@ -1,0 +1,7 @@
+<div id="comment-form"> 
+  <h3>add comment</h3>
+  <%= form_for [comments] do |f| %>
+    <%= f.text_area :text %>
+    <%= f.submit "comment" %>
+  <% end %>
+</div>
