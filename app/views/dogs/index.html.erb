@@ -3,9 +3,10 @@
 <div id="breeds">
 
 <% @dogs.each do |dog| %>
+		<img src=<%= "#{dog.image_url}" %>>  <br> 
 		<%= dog.breed %> <br>
 		<%= dog.description %> <br>
-		<%= dog.image_url %> <br>
+		
 <br>
 
 
