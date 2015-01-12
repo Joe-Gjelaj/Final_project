@@ -3,7 +3,23 @@ Rails.application.routes.draw do
 
   get 'dogs/' => "dogs#index"
 
-  get 'comments/:new' => "comments#new"
+  resources :comments
+
+  get "/users/sign_in" =>      "devise/sessions#new"
+  post "/users/sign_in" =>     "devise/sessions#create"
+  delete  "/users/sign_out" => "devise/sessions#destroy"
+  post  "/users/password" =>   "devise/passwords#create"
+  get "/users/password/new" => "devise/passwords#new"
+  get "/users/password/edit"=> "devise/passwords#edit"
+  patch  "/users/password" => "devise/passwords#update"
+  put "/users/password" =>    "devise/passwords#update"
+  get "/users/cancel" =>      "devise/registrations#cancel"
+  post "/users" =>  "devise/registrations#create"
+  get "/users/sign_up" =>  "devise/registrations#new"
+  get "/users/edit" => "devise/registrations#edit"
+  patch "/users" =>  "devise/registrations#update"
+  put "/users" =>  "devise/registrations#update"
+  delete "/users" =>  "devise/registrations#destroy"
 
 
   mount Rapidfire::Engine => "/rapidfire"

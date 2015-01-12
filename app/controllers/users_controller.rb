@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       flash[:alert] = "Unsuccessful signup. Please try again."
     end
 
-    redirect_to "/"
+    redirect_to ""
   end
 
   def new

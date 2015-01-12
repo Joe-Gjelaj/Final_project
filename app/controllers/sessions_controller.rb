@@ -12,12 +12,12 @@ class SessionsController < ApplicationController
     	flash[:alert] = "Login failed, please try again"
     end
 
-    redirect_to "/new"
+    redirect_to ""
   end
 
   def destroy
   	session[:user_id] = nil
-  	redirect_to "/"
+  	redirect_to ""
   end
 
   private
