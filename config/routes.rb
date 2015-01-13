@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get 'dogs/' => "dogs#index"
 
+  get "/" => 'home#index'
+
+  get "/sign_up" => 'home#sign_up'
+
   resources :comments
 
   get "/users/sign_in" =>      "devise/sessions#new"
@@ -22,7 +26,7 @@ Rails.application.routes.draw do
   delete "/users" =>  "devise/registrations#destroy"
 
 
-  mount Rapidfire::Engine => "/rapidfire"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
