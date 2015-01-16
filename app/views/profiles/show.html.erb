@@ -1,0 +1,6 @@
+<p><%= @profile.bio %></p>
+<% if @current_user && @current_user.id == @profile.user_id %>
+  <a href=<%= "/profiles/#{ @profile.id }/edit" %>>
+    EDIT PROFILE
+  </a>
+<% end %>
