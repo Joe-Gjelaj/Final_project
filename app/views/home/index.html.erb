@@ -1,11 +1,5 @@
-<% if @current_user %>
-  <h3><%= @current_user.fname %></h3>
-  <a href=<%= "/users/#{ @current_user.id }" %>>Profile</a>
-<% else %>
-  <a href="/users/sign_up">Signup</a>
-  <br>
   <h2>Log in</h2>
-Hello
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -22,7 +16,7 @@ Hello
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
-  <% end -%>
+  <% end %>
 
   <div class="actions">
     <%= f.submit "Log in" %>
@@ -31,4 +25,4 @@ Hello
 
 <%= render "devise/shared/links" %>
 
-<% end %>
+

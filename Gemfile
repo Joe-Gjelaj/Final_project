@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'nokogiri'
 gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
