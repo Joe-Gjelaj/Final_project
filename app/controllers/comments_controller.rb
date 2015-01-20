@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     p params[:comment][:text]
     @comment = Comment.new(comment_params)
     @comment.user_id = session[:user_id]
-    @comment.post_id = params[:post_id]
+    
 
     if @comment.save
       flash[:notice] = "Thanks for your comment!"
@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
       flash[:alert] = "Your comment could not be posted. Please try again."
     end
 
-    redirect_to ""
+    redirect_to "/users/#{current_user.id}"
   end
 
   def show

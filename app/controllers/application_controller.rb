@@ -6,4 +6,10 @@ class ApplicationController < ActionController::Base
   def can_administer?
     current_user.try(:admin?)
   end
+
+  def after_sign_in_path_for(resource)
+  	"/users/#{current_user.id}"
+  end
+
 end
+
