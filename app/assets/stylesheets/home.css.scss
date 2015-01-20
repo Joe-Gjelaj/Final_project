@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.background-img{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(http://fairhavenvet.com/uploads/paw_prints_in_the_sand.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: -1;
+}
+
+
+
+
+
