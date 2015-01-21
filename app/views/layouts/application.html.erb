@@ -22,15 +22,18 @@
         
       <li><a href="/dogs">Breeds</a></li>
 
-		  <li><a href="/quiz">Dog Breed Quiz</li>
+		  <li><a href="/quiz">Dog Breed Quiz</a></li>
 
       <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
 
     </ul>
     <% end %>
 </nav>
-
+<div id="logo">
+<%= image_tag "logo.jpg" %>
+</div>
+<main>
 <%= yield %>
-
+</main>
 </body>
 </html>

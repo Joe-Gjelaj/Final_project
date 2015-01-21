@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   def create
     p params[:comment][:text]
     @comment = Comment.new(comment_params)
-    @comment.user_id = session[:user_id]
+    @comment.user_id = current_user.id
     
 
     if @comment.save
@@ -24,6 +24,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @current_user = User.find(session[:user_id])
   end
 
   def edit
@@ -47,7 +48,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params.require(:comment).permit(:body)
   end
 
 end
