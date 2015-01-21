@@ -16,16 +16,18 @@
 <% end %>
 
 <nav>
+  <% if current_user %>
 	<ul>
     	<li><a href="/">Home</a></li>
         
       <li><a href="/dogs">Breeds</a></li>
 
-		  <li><a href="/quiz">What Breed Is Best For Me?</a></li>
+		  <li><a href="/quiz">Dog Breed Quiz</li>
 
-      <li><a href="/users">My Profile</a></li>
+      <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
 
     </ul>
+    <% end %>
 </nav>
 
 <%= yield %>

@@ -1,3 +1,25 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#no-posts {
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+#new-post form, #edit-post form {
+	margin-left: 30px;
+}
+
+#new-post form input[type="text"], #new-post form textarea, #edit-post form input[type="text"], #edit-post form textarea {
+	display: block;
+	width: 400px;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid gray;
+}
+
+#new-post form textarea, #edit-post form textarea {
+	height: 300px;
+}

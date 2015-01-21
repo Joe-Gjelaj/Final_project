@@ -41,7 +41,7 @@ class CommentsController < ApplicationController
       flash[:alert] = "Could not delete comment. please try again."
     end
 
-    redirect_to ""
+    redirect_to "/users/#{current_user.id}"
   end
 
   private

@@ -14,3 +14,57 @@
  *= require_self
  */
 
+
+nav ul {
+  font-family: Lucida;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: block;
+  position: relative;
+  float: left;
+
+}
+
+nav li ul {
+  display: none;
+}
+
+nav ul li a {
+  display: block; border-radius: 5px;
+  text-decoration: none;
+  padding: 7px 15px 3px 15px;
+  background: #3B240B;
+  color: #ffffff;
+  margin-left: 1px;
+  white-space: nowrap;
+  height:30px; 
+  width:175px;
+  text-align:center;
+
+}
+
+nav ul li a:hover {
+  background: #8A0808;
+}
+
+nav li:hover ul {
+  display: block;
+  position: absolute;
+  height:30px;
+}
+
+nav li:hover li {
+  float: none;
+  font-size: 11px;
+
+}
+
+
+nav ul li ul li a {
+    text-align:left; 
+}
