@@ -2,11 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
+.quiz{
 	
 	background-image: url("dog.gif");
 	background-repeat: no-repeat; 
 	background-size: cover;
+	position: absolute;
+	height: 100%;
+	width:100%;
+	z-index: -1;
+	margin-left: -2%;
+	margin-top: -2%;
 }
 
 #logo{
